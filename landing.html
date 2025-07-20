@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voxcord - Enterprise AI Voice Infrastructure</title>
+    <meta name="description" content="Deploy intelligent voice assistants with carrier-grade infrastructure. 99.9% uptime SLA, enterprise security, and industry-specific AI training.">
+    <meta name="keywords" content="AI voice assistant, enterprise telephony, business phone system, voice AI, customer service automation">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/static/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    
+    <!-- Additional landing page specific styles -->
+    <style>
+        /* Landing page specific enhancements */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .telecom-dashboard {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-xl);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 420px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .signal-bars {
+            display: flex;
+            gap: var(--space-xs);
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .signal-bar {
+            width: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            animation: pulse-bar 2s ease-in-out infinite;
+        }
+
+        .signal-bar:nth-child(1) { height: 20px; animation-delay: 0s; }
+        .signal-bar:nth-child(2) { height: 30px; animation-delay: 0.2s; }
+        .signal-bar:nth-child(3) { height: 40px; animation-delay: 0.4s; }
+        .signal-bar:nth-child(4) { height: 50px; animation-delay: 0.6s; }
+        .signal-bar:nth-child(5) { height: 35px; animation-delay: 0.8s; }
+
+        @keyframes pulse-bar {
+            0%, 100% { background: rgba(255, 255, 255, 0.3); }
+            50% { background: rgba(255, 255, 255, 0.8); }
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-xl);
+            margin: var(--space-2xl) 0;
+            opacity: 0.6;
+        }
+
+        .trust-logo {
+            height: 40px;
+            width: auto;
+            filter: grayscale(100%);
+            transition: all var(--transition-normal);
+        }
+
+        .trust-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-3xl);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-normal);
+            border-top: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--telecom-cyan) 100%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--telecom-cyan) 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--telecom-indigo) 100%);
+            color: white;
+            padding: var(--space-3xl) 0;
+            margin: var(--space-3xl) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent);
+            display: block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .pricing-section {
+            background: var(--gray-50);
+            padding: var(--space-3xl) 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            border: 2px solid transparent;
+            transition: all var(--transition-normal);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-lg);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-sm);
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: var(--space-xs);
+        }
+
+        .plan-period {
+            color: var(--gray-500);
+            margin-bottom: var(--space-xl);
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: var(--space-xl);
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+            color: var(--gray-600);
+        }
+
+        .plan-features .check {
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .plan-features .cross {
+            color: var(--gray-400);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-column: span 2;
+                order: 1;
+            }
+            
+            .hero-visual {
+                grid-column: span 2;
+                order: 2;
+                margin-top: var(--space-xl);
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-container">
+                <a href="/" class="navbar-brand">
+                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary) 0%, var(--telecom-cyan) 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; margin-right: 0.75rem;">📡</div>
+                    Voxcord
+                </a>
+                <ul class="navbar-nav">
+                    <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                    <li><a href="#enterprise" class="nav-link">Enterprise</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="/login" class="btn btn-ghost btn-sm">Sign In</a></li>
+                    <li><a href="/signup?plan=free" class="btn btn-primary btn-sm">Start Free</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="grid grid-cols-2" style="align-items: center; gap: var(--space-3xl);">
+                <div class="hero-content">
+                    <h1 class="hero-title">Enterprise-Grade <span style="background: linear-gradient(135deg, #00ccff 0%, #ffffff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">AI Voice Infrastructure</span></h1>
+                    <p class="hero-subtitle">Deploy intelligent voice assistants that understand your business. Built on carrier-grade infrastructure with enterprise security and 99.9% uptime SLA.</p>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <span class="metric-value">99.9%</span>
+                            <span class="metric-label">Uptime SLA</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">< 3s</span>
+                            <span class="metric-label">Response Time</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">24/7</span>
+                            <span class="metric-label">Monitoring</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">SOC 2</span>
+                            <span class="metric-label">Certified</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: var(--space-lg); margin-top: var(--space-xl); align-items: center;">
+                        <a href="/signup?plan=free" class="btn btn-primary btn-xl">Start Free - No Credit Card</a>
+                        <a href="#demo" style="color: white; font-weight: 600; display: flex; align-items: center; gap: var(--space-sm);">
+                            ▶️ View Demo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="telecom-dashboard">
+                        <div style="text-align: center; margin-bottom: var(--space-lg);">
+                            <div style="font-size: 2rem; margin-bottom: var(--space-sm);">📡</div>
+                            <h3 style="color: white; margin: 0 0 var(--space-xs); font-size: 1.2rem;">Voice Network Active</h3>
+                            <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: 0.9rem;">AI Agents Online</p>
+                        </div>
+                        
+                        <div class="signal-bars">
+                            <div class="signal-bar"></div>
+                            <div class="signal-bar"></div>
+                            <div class="signal-bar"></div>
+                            <div class="signal-bar"></div>
+                            <div class="signal-bar"></div>
+                        </div>
+                        
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <span class="metric-value" id="live-calls">1,247</span>
+                                <span class="metric-label">Calls Today</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value" id="active-agents">12</span>
+                                <span class="metric-label">Active Now</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">98%</span>
+                                <span class="metric-label">Satisfaction</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">2.1s</span>
+                                <span class="metric-label">Avg Response</span>
+                            </div>
+                        </div>

@@ -1,0 +1,57 @@
+2025-07-20 20:18:52,034 - __main__ - WARNING - Email service not configured - verification emails will not be sent
+2025-07-20 20:18:52,036 - __main__ - INFO - Starting Voxcord backend server...
+2025-07-20 20:18:52,037 - __main__ - INFO - Email service: Not configured
+2025-07-20 20:18:52,059 - werkzeug - WARNING -  * Debugger is active!
+2025-07-20 20:18:52,067 - werkzeug - INFO -  * Debugger PIN: 115-014-113
+2025-07-20 20:19:53,773 - __main__ - WARNING - Email service not configured - verification emails will not be sent
+2025-07-20 20:19:53,776 - __main__ - INFO - Starting Voxcord backend server...
+2025-07-20 20:19:53,776 - __main__ - INFO - Email service: Not configured
+2025-07-20 20:19:53,813 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.105:5000
+2025-07-20 20:19:53,817 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-20 20:19:53,819 - werkzeug - INFO -  * Restarting with stat
+2025-07-20 20:19:55,658 - __main__ - WARNING - Email service not configured - verification emails will not be sent
+2025-07-20 20:19:55,658 - __main__ - INFO - Starting Voxcord backend server...
+2025-07-20 20:19:55,659 - __main__ - INFO - Email service: Not configured
+2025-07-20 20:19:55,680 - werkzeug - WARNING -  * Debugger is active!
+2025-07-20 20:19:55,688 - werkzeug - INFO -  * Debugger PIN: 115-014-113
+2025-07-20 20:19:57,585 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:19:57] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+2025-07-20 20:19:59,076 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:19:59] "[33mGET /active_calls HTTP/1.1[0m" 404 -
+2025-07-20 20:19:59,385 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:19:59] "[33mGET /active_calls HTTP/1.1[0m" 404 -
+2025-07-20 20:19:59,388 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:19:59] "GET /health HTTP/1.1" 200 -
+2025-07-20 20:20:00,829 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:20:00] "[36mGET /dashboard HTTP/1.1[0m" 304 -
+2025-07-20 20:20:01,743 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:20:01] "[33mGET /phone_info HTTP/1.1[0m" 404 -
+2025-07-20 20:20:02,050 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:20:02] "[33mGET /active_calls HTTP/1.1[0m" 404 -
+2025-07-20 20:20:02,053 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:20:02] "GET /health HTTP/1.1" 200 -
+2025-07-20 20:20:02,362 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:20:02] "[33mGET /active_calls HTTP/1.1[0m" 404 -
+2025-07-20 20:20:05,281 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:20:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-20 20:20:05,565 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:20:05] "GET /landing HTTP/1.1" 200 -
+2025-07-20 20:20:05,600 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 20:20:05] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-07-20 20:21:51,405 - werkzeug - INFO -  * Detected change in 'C:\\Users\\baldi\\OneDrive\\Desktop\\voxcordtest\\app.py', reloading
+2025-07-20 20:21:51,630 - werkzeug - INFO -  * Restarting with stat
+2025-07-20 20:21:53,730 - __main__ - WARNING - Email service not configured - verification emails will not be sent
+2025-07-20 20:21:53,730 - __main__ - INFO - Starting Voxcord backend server...
+2025-07-20 20:21:53,732 - __main__ - INFO - Email service: Not configured
+2025-07-20 20:21:53,753 - werkzeug - WARNING -  * Debugger is active!
+2025-07-20 20:21:53,761 - werkzeug - INFO -  * Debugger PIN: 115-014-113
+2025-07-20 21:03:23,358 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 21:03:23] "[36mGET /landing HTTP/1.1[0m" 304 -
+2025-07-20 21:03:23,396 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 21:03:23] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-07-20 21:03:40,282 - __main__ - WARNING - Email service not configured - verification emails will not be sent
+2025-07-20 21:03:40,282 - __main__ - INFO - Starting Voxcord backend server...
+2025-07-20 21:03:40,282 - __main__ - INFO - Email service: Not configured
+2025-07-20 21:03:40,343 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.105:5000
+2025-07-20 21:03:40,344 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-20 21:03:40,347 - werkzeug - INFO -  * Restarting with stat
+2025-07-20 21:03:42,320 - __main__ - WARNING - Email service not configured - verification emails will not be sent
+2025-07-20 21:03:42,321 - __main__ - INFO - Starting Voxcord backend server...
+2025-07-20 21:03:42,321 - __main__ - INFO - Email service: Not configured
+2025-07-20 21:03:42,346 - werkzeug - WARNING -  * Debugger is active!
+2025-07-20 21:03:42,354 - werkzeug - INFO -  * Debugger PIN: 115-014-113
+2025-07-20 21:03:42,663 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 21:03:42] "[36mGET /landing HTTP/1.1[0m" 304 -
+2025-07-20 21:03:42,811 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 21:03:42] "GET /static/styles.css HTTP/1.1" 200 -
+2025-07-20 21:04:40,066 - werkzeug - INFO - 127.0.0.1 - - [20/Jul/2025 21:04:40] "[36mGET /signup?plan=free HTTP/1.1[0m" 304 -
